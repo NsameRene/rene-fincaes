@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+
+    /* Exact Design Tokens */
+    --color-brand-blue: #2457E6;
+    --color-deep-navy: #17233B;
+    --color-bg-primary: #F7F8FA;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #202633;
+    --color-text-secondary: #737B89;
+    --color-border-subtle: #E6E9EF;
+    --color-income: #16845B;
+    --color-expense: #D64545;
+    --color-warning: #B7791F;
+  }
+
+  .dark {
+    --color-bg-primary: #0E131F;
+    --color-surface: #161F30;
+    --color-text-primary: #F3F5F9;
+    --color-text-secondary: #8E98A8;
+    --color-border-subtle: #222C3E;
+  }
+
+  html, body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tabular figures for aligned financial amounts */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe area padding utilities */
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.75rem);
+}
+.pb-safe-nav {
+  padding-bottom: calc(max(env(safe-area-inset-bottom), 0.5rem) + 4.25rem);
+}

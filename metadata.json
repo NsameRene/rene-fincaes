@@ -1,0 +1,8 @@
+{
+  "name": "Rene Finance",
+  "description": "Understand your money. Control your future. Premium offline personal finance app with multi-account tracking, mobile money, budgets, savings, and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
